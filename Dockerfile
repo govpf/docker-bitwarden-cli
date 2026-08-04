@@ -1,5 +1,8 @@
 FROM govpf/debian:bookworm
 
+LABEL govpf.category="utility"
+LABEL govpf.fromimage="govpf/debian:bookworm"
+
 ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/local/bin/tini
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc /tmp/tini.asc
